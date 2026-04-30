@@ -23,8 +23,8 @@ export default function ReportApp() {
   const fileInputRef = useRef(null);
   const templateInputRef = useRef(null);
   const claudeApiKey = import.meta.env.VITE_CLAUDE_API_KEY || "";
-  const AUTOSAVE_KEY = "vapt-autosave";
-  const META_SAVE_KEY = "vapt-meta-autosave";
+  const AUTOSAVE_KEY = "bifrost-autosave";
+  const META_SAVE_KEY = "bifrost-meta-autosave";
   const REQUIRED_FINDING_FIELDS = ["id", "siNo", "issueName", "severity"];
 
   useEffect(() => {
@@ -130,7 +130,7 @@ export default function ReportApp() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `vapt-report-${Date.now()}.json`;
+    link.download = `bifrost-report-${Date.now()}.json`;
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -224,9 +224,9 @@ export default function ReportApp() {
           <div className="flex items-center gap-3">
             <div className="flex h-[34px] w-[34px] items-center justify-center rounded-lg bg-white/15 text-base">🛡️</div>
             <div>
-              <span className="text-base font-extrabold tracking-[-0.02em] text-white">SecReport</span>
+              <span className="text-base font-extrabold tracking-[-0.02em] text-white">Bifrost</span>
               <span className="ml-2 rounded bg-white/10 px-2 py-[1px] text-[11px] font-semibold tracking-[0.05em] text-blue-200">
-                VAPT REPORT GENERATOR
+                VULNERABILITY REPORT GENERATOR
               </span>
             </div>
           </div>

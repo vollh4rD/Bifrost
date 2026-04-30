@@ -314,7 +314,7 @@ export const exportToExcel = async (findings, templateBuffer, reportMeta = {}, o
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = `vapt-report-${Date.now()}.xlsx`;
+  a.download = `bifrost-report-${Date.now()}.xlsx`;
   a.click();
   URL.revokeObjectURL(url);
 };
