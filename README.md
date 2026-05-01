@@ -95,6 +95,8 @@ Any worksheet cell can contain:
 
 These values are replaced from the report metadata form.
 
+> **Disclaimer:** AI generation is a convenience feature only. You are responsible for any client data you send to third-party AI services, and the tool does not assume liability for data handling, accuracy, confidentiality, or compliance.
+
 ## Notes
 
 - A valid `VITE_CLAUDE_API_KEY` is required for AI generation.
